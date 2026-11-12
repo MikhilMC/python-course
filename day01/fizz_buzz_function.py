@@ -1,15 +1,11 @@
-def compute(num:int) -> str | int:
-    if num % 15 == 0:
-        return "Fizz Buzz"
-    elif num % 3 == 0:
-        return "Fizz"
-    elif num % 5 == 0:
-        return "Buzz"
-    else:
-        return num
-
 def fizz_buzz(num:int) -> list[str | int]:
-    return [compute(x) for x in range(1, num + 1)]
+    return [
+        "Fizz Buzz" if x % 15 == 0 else
+        "Fizz" if x % 3 == 0 else
+        "Buzz" if x % 5 == 0 else
+        x
+        for x in range(1, num + 1)
+    ]
 
 def main():
     raw = input("enter limit ")

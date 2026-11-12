@@ -29,6 +29,6 @@ def play(low: int = 1, high: int = 100, max_tries: int = 7) -> None:
 if __name__ == "__main__":
     while True:
         play()
-        answer = input("play again? (y/n)")
+        answer = input("play again? (y/n) ")
         if answer.lower() != "y":
             break
